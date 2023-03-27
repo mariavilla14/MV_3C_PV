@@ -1,0 +1,48 @@
+{% extends 'uf.html' %}
+
+
+{% block content %}
+    <p></p>
+    <h1>LISTADO DE AFICIONADOS REGISTRADOS</h1>
+    <p></p>
+    <div class="row col-12 justify-content-end mb-2 pr-0">
+
+          <a class="btn btn-info col-md-2" href="{% url 'registraraficionado' %}">Agregar Nuevo</a>
+
+    </div>
+    <p></p>
+
+     {% if mensaje %}
+                 <div class="alert alert-success" role="alert">
+                       AFICIONADO ELIMINADO EXITOSAMENTE!
+                 </div>
+            {% endif %}
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Telefono</th>
+        <th scope="col">Fecha_nacimiento</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for aficionado in aficionados %}
+    <tr>
+      <th scope="row">{{  aficionado.id }}</th>
+      <td>{{  aficionado.nombre }}</td>
+      <td>{{ aficionado.apellido }}</td>
+      <td>{{ aficionado.telefono }}</td>
+      <td>{{ aficionado.fecha_nacimiento }}</td>
+    <td><a class="btn btn-warning" href="{% url 'editaraficionados' aficionado.id %}">Editar</a></td>
+    <td><a class="btn btn-danger" href="{% url 'eliminaraficionados' aficionado.id %}">Eliminar</a></td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    {%  load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRhttps://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">DJANGO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'port' %}">PORTAFOLIO</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">MANTENIMIENTO </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'registraraficionado' %}">REGISTRO AFICIONADO</a></li>
+            <li><a class="dropdown-item" href="{% url 'listaraficionados' %}">CONSULTA AFICIONADO</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'listaraficionados' %}">EDITAR Y ELIMINAR</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">CONTACTO</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Busca Aqui" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<p></p>
+
+
+</div>
+
+<p></p>
+
+
+<header>
+
+        <section class="textos-header">
+            <h1>Descubre quién eres y hazlo a propósito</h1>
+            <h2>Yo no digo mentiras, le doy amplitud a la verdad</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-9.51,-8.27 C158.10,158.47 350.54,-77.33 560.47,32.17 L500.00,149.98 L-57.47,174.26 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg></div>
+</header>
+
+<div style="text-align: center;">
+          <button type="button" class="btn btn-danger">Ir Página</button>
+          <button type="button" class="btn btn-outline-dark">Saber Más</button>
+</div>
+
+
+
+<button type="button" class="btn btn-dark position-absolute bottom-0 start-0">
+  VIX <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+</button>
+
+<button type="button" class="btn btn-dark position-absolute bottom-90 start-0">
+  ALERTAS <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
+</button>
+
+<button type="button" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y">
+  MENSAJES
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+    <span class="visually-hidden">unread messages</span>
+  </span>
+</button>
+
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0 translate-middle"></div>
+  <div class="position-absolute top-0 start-50 translate-middle"></div>
+  <div class="position-absolute top-0 start-100 translate-middle"></div>
+  <div class="position-absolute top-50 start-0 translate-middle"></div>
+  <div class="position-absolute top-50 start-50 translate-middle"></div>
+  <div class="position-absolute top-50 start-100 translate-middle"></div>
+  <div class="position-absolute top-100 start-0 translate-middle"></div>
+  <div class="position-absolute top-100 start-50 translate-middle"></div>
+  <div class="position-absolute top-100 start-100 translate-middle"></div>
+</div>
+
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Nuestro producto</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="/static/img/a11.jpg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Las mejores caricaturas</h3>
+                    <p>La caricatura ha sido desde el comienzo de la historia un tipo de representación exagerada de unos personajes.</p>
+                    <h3><span>2</span>Las mejores caricaturas</h3>
+                    <p>antasmagorie. Estreno: 17 de agosto de 1908. Fasntamagorie fue creado por el dibujante y animador Émile Cohl en 1908.</p>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Portafolio</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="/static/img/a1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="/static/img/icon.svg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="/static/img/a2.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icon.svg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="/static/img/a3.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icon.svg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="/static/img/a4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/a6.jpeg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="/static/img/a5.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icon.svg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="/static/img/a9.jpeg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icon.svg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="/static/img/a7.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icon.svg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="/static/img/a8.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icon.svg" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1>Un buen desarrollador de software trabaja con disciplina y constancia desde el primer día”.
+        </h1>
+        <ul class="list-group">
+          <li class="list-group-item">C++ : Más adecuado para el diseño de aplicaciones y software de mayor complejidad.</li>
+          <li class="list-group-item">Java : Es el lenguaje más utilizado a nivel global debido a tres factores: su solidez, facilidad de aprendizaje y redacción </li>
+          <li class="list-group-item">Python : Es un lenguaje relativamente moderno y diseñado para ser de propósito general. </li>
+          <li class="list-group-item">SQL : Es un lenguaje diseñado para facilitar la administración de diferentes bases de datos. </li>
+          <li class="list-group-item">PHP : Es un lenguaje orientado hacia el diseño Backend de páginas web. Es muy adecuado porque es perfectamente compatible con HTML.</li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">CARICATURAS</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">TIPOS DE CARICATURAS</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">LINK DE CARICATURAS</a>
+  <a class="flex-sm-fill text-sm-center nav-link disabled">IR AL PRINCIPIO</a>
+
+</nav>
+
+        <section class="clientes contenedor">
+            <h2 class="titulo">Que serie te gusta</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="/static/img/face1.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>LOS SIMPSONS</h4>
+                        <p>La serie es una sátira hacia la sociedad estadounidense que narra la vida y el día a día de una familia de clase media que vive en un pueblo ficticio llamado Springfield.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/static/img/face2.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>HEY ARNOLD</h4>
+                        <p>Arnold es un chico muy inteligente, con una extraña cabeza con forma de balón de fútbol americano..</p>
+                    </div>
+                </div>
+            </div>
+            <select class="form-select bg-info mt-5" aria-label="Default select example">
+                   <option selected>SELECCIONA TU CARICATURA FAVORITA</option>
+                        <option value="1">LOS SIMPSONS</option>
+                        <option value="2">HEY ARNOLD</option>
+                        <option value="3">BOB ESPONJA</option>
+                        <option value="4">LOS PICAPIEDRAS</option>
+                        <option value="5">ARGENTINA CAMPEON DEL MUNDO</option>
+            </select>
+
+<div style="text-align: right;">
+            <a class="btn btn-primary disabled mt-3" role="button" aria-disabled="true">ENVIAR</a>
+            <a class="btn btn-secondary disabled mt-3" role="button" aria-disabled="true">REGRESAR</a>
+</div>
+
+
+        </section>
+
+
+        <section class="about-services">
+            <div class="contenedor">
+                <h2 class="titulo">Nuestras Caricaturas</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-ind">
+                        <img src="/static/img/a10.jpeg" alt="">
+                        <h3>Clasificacion</h3>
+                        <p>caricatura editorial, personal, política, costumbrista y de ilustración. </p>
+
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="/static/img/a12.jpg" alt="">
+                        <h3>Animadas</h3>
+                        <p> Los aparatos que permitieron ver por primera vez imágenes en movimiento eran artilugios mecánicos que funcionaba a partir de principios ópticos. </p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="/static/img/a14.png" alt="">
+                        <h3>Gravity Falss</h3>
+                        <p>El tío Stan invita a los gemelos Dipper y Mabel Pines a pasar el verano en el misterioso pueblo de Gravity Falls. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+<footer>
+    <div class="contenedor-footer">
+        <div class="content-foo">
+            <h4>Phone</h4>
+            <p>094440785</p>
+
+        </div>
+        <div class="content-foo">
+            <h4>Email</h4>
+            <p>mariavilla28@gmail.com</p>
+
+        </div>
+        <div class="content-foo">
+            <h4>Ubicación</h4>
+            <p>Alborada 4ta etapa</p>
+
+
+        </div>
+    </div>
+    <h2 class="titulo-final">&copy; MARIAVILLATORRES</h2>
+</footer>
+
+
+</body>
+</html>
